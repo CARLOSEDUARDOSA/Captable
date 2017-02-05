@@ -1,26 +1,45 @@
 import React from 'react';
 
 class Captable extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  getRows() {
+    var rows = [];
+
+    this.props.store.map((item, ixItem) => {
+      debugger;
+
+      rows.push(
+        <tr key={ixItem}>
+          {
+            React.Children.map(this.props.children.props.children, column => {
+              debugger;
+              return (
+                <td>
+                  {item[column.props.name]}
+                </td>
+              )
+            })
+          }
+        </tr>
+      );
+    });
+
+    return rows;
+  }
+
   render() {
     return (
       <table className="table table-striped">
         {this.props.children}
         <tbody>
-          {this.props.store.map((data, index) => {
-            return (
-              <tr key={index}>
-                <td>
-                  {data.Hero}
-                </td>
-                <td>
-                  {data.Type}
-                </td>
-                <td>
-                  {data.Level}
-                </td>
-              </tr>
-            )
-          })}
+          {
+            this.getRows().map((item, index) => {
+              return item;
+            })
+          }
         </tbody>
       </table>
     );
