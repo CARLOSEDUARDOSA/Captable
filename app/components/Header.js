@@ -20,7 +20,7 @@ class Header extends React.Component {
             <i className="caret"></i>
           </a>
           <ul className="dropdown-menu">
-            <li><Link to="/account">My Account</Link></li>
+            <li><Link to="/account">Minha conta</Link></li>
             <li className="divider"></li>
             <li><a href="#" onClick={this.handleLogout.bind(this)}>Logout</a></li>
           </ul>
@@ -29,7 +29,7 @@ class Header extends React.Component {
     ) : (
       <ul className="nav navbar-nav navbar-right">
         <li><Link to="/login" activeStyle={active}>Log in</Link></li>
-        <li><Link to="/signup" activeStyle={active}>Sign up</Link></li>
+        <li><Link to="/signup" activeStyle={active}>Registrar</Link></li>
       </ul>
     );
     return (
@@ -37,17 +37,17 @@ class Header extends React.Component {
         <div className="container">
           <div className="navbar-header">
             <button type="button" data-toggle="collapse" data-target="#navbar" className="navbar-toggle collapsed">
-              <span className="sr-only">Toggle navigation</span>
+              <span className="sr-only">Navegação</span>
               <span className="icon-bar"></span>
               <span className="icon-bar"></span>
               <span className="icon-bar"></span>
             </button>
-            <IndexLink to="/" className="navbar-brand">Project name</IndexLink>
+            <IndexLink to="/" className="navbar-brand">Captable</IndexLink>
           </div>
           <div id="navbar" className="navbar-collapse collapse">
             <ul className="nav navbar-nav">
               <li><IndexLink to="/" activeStyle={active}>Home</IndexLink></li>
-              <li><Link to="/contact" activeStyle={active}>Contact</Link></li>
+              <li><Link to="/contact" activeStyle={active}>Contato</Link></li>
             </ul>
             {rightNav}
           </div>

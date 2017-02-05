@@ -5,7 +5,7 @@
   "scripts": {
     "build": "webpack --display-error-details",
     "postinstall": "npm run build",
-    "start": "node server.js",
+    "start": "node server.js --watch",
     "test": "npm run test:client && npm run test:server",
     "test:client": "mocha test/client --recursive --compilers js:babel-register",
     "test:server": "mocha test/server --recursive --compilers js:babel-register"
