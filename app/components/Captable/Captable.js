@@ -9,13 +9,10 @@ class Captable extends React.Component {
     var rows = [];
 
     this.props.store.map((item, ixItem) => {
-      debugger;
-
       rows.push(
         <tr key={ixItem}>
           {
             React.Children.map(this.props.children.props.children, column => {
-              debugger;
               return (
                 <td>
                   {item[column.props.name]}
