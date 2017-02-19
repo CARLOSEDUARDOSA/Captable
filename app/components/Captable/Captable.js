@@ -5,6 +5,10 @@ import Columns from './Columns.js';
 class Captable extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      rowSelected: -1
+    }
   }
 
   getRows() {
@@ -12,7 +16,7 @@ class Captable extends React.Component {
 
     this.props.store.map((item, ixItem) => {
       rows.push(
-        <tr key={ixItem}>
+        <tr key={ixItem} onClick={() => this.selectRow(item, ixItem)} className={this.state.rowSelected == ixItem ? 'captable__selected-row' : null}>
           {
             React.Children.map(this.props.children.props.children, column => {
               return (
@@ -27,6 +31,12 @@ class Captable extends React.Component {
     });
 
     return rows;
+  }
+
+  selectRow(row, position) {
+    this.setState({
+      rowSelected: position
+    });
   }
 
   render() {

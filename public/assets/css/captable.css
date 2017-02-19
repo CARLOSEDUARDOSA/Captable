@@ -7,6 +7,10 @@ body {
   font-family: 'Roboto', sans-serif;
   color: #2E455C;
 }
+.captable__table .captable__selected-row {
+  background-color: #CFE6F6;
+  border-bottom: 2px solid #9DCEED;
+}
 .captable__table th,
 .captable__table td {
   width: 20%;
