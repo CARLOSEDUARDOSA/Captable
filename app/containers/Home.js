@@ -1,29 +1,24 @@
 import React from 'react';
 import { Captable, Columns, Column } from '../components/Captable/Captable';
-
-const data = [{ Hero: 'Mirana', Type: 'Agility', Level: '15' }, { Hero: 'Disruptor', Type: 'Intelligence', Level: '12' }, { Hero: 'Dragon Knight', Type: 'Agility', Level: '16' }, { Hero: 'Sniper', Type: 'Agility', Level: '17' }, { Hero: 'Pudge', Type: 'Strength', Level: '16' }, { Hero: 'Pudge', Type: 'Strength', Level: '16' }, { Hero: 'Pudge', Type: 'Strength', Level: '16' }, { Hero: 'Pudge', Type: 'Strength', Level: '16' }, { Hero: 'Pudge', Type: 'Strength', Level: '16' }, { Hero: 'Pudge', Type: 'Strength', Level: '16' }];
+import data from '../data.js';
 
 class Home extends React.Component {
   render() {
     return (
       <div className="container-fluid">
-        <div className="panel panel-default">
-          <div className="panel-body">
-            <Captable store={data} height="300">
-              <Columns>
-                <Column name="Hero" />
-                <Column name="Type" />
-                <Column name="Level" />
-                <Column name="Hero" />
-                <Column name="Type" />
-                <Column name="Level" />
-                <Column name="Hero" />
-                <Column name="Type" />
-                <Column name="Level" />
-              </Columns>
-            </Captable>
-          </div>
-        </div>
+          <Captable store={data} height="300">
+            <Columns>
+              <Column name="Hero" />
+              <Column name="Type" />
+              <Column name="Level" />
+              <Column name="Hero" />
+              <Column name="Type" />
+              <Column name="Level" />
+              <Column name="Hero" />
+              <Column name="Type" />
+              <Column name="Level" />
+            </Columns>
+          </Captable>
       </div>
     );
   }
