@@ -1,26 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 body {
   background-color: grey;
   margin: 20px;
 }
+.captable__table {
+  font-family: 'Roboto', sans-serif;
+  color: #2E455C;
+}
 .captable__table th,
 .captable__table td {
-  border-right: 1px solid #ccc;
   width: 20%;
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
 }
 .captable__table tbody {
+  background-color: #EBF1F5;
   display: block;
   overflow: auto;
+}
+.captable__table tbody tr:nth-child(odd) > td,
+.captable__table tbody tr:nth-child(odd) > th {
+  background-color: #fff;
 }
 .captable__table thead,
 .captable__table tbody tr {
   display: table;
   width: 100%;
   table-layout: fixed;
+  border-bottom: 2px solid #DFE7F2;
 }
 .captable__table thead {
   width: 100%;
+  background-color: #F4F7FB;
+  font-weight: 700;
 }
-.captable__table tbody > tr > td {
+.captable__table thead th {
+  border-right: 1px solid #DFE7F2;
+}
+.captable__table tbody tr:hover td {
+  background-color: #CFE6F6;
+  border-bottom: 2px solid #9DCEED;
+}
+.captable__table tbody tr td {
   border-top: 0px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #DFE7F2;
 }

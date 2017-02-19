@@ -7,7 +7,7 @@ class Home extends React.Component {
   render() {
     return (
       <div className="container-fluid">
-        <div className="panel">
+        <div className="panel panel-default">
           <div className="panel-body">
             <Captable store={data} height="300">
               <Columns>

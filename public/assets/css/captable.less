@@ -1,17 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+@font-color: #2E455C;
+@primary-color: #F4F7FB;
+@secondary-color: #EBF1F5;
+@tertiary-color: #DFE7F2;
+
 body {
     background-color: grey;
     margin: 20px;
 }
 
 .captable__table {
+    font-family: 'Roboto', sans-serif;
+    color: @font-color;
+
     th, td {
-        border-right: 1px solid #ccc;
         width: 20%;
+        padding-top: 15px !important;
+        padding-bottom: 15px !important;
     }
 
     tbody {
+        background-color: @secondary-color;
         display: block;
         overflow: auto;
+
+        tr:nth-child(odd) {
+            &>td, &>th {
+                background-color: #fff;
+            }
+        }
     }
     
     thead,
@@ -19,14 +37,33 @@ body {
         display: table;
         width: 100%;
         table-layout: fixed;
+        border-bottom: 2px solid @tertiary-color;
     }
 
     thead {
         width: 100%;
+        background-color: @primary-color;
+        font-weight: 700;
+ 
+        th {
+            border-right: 1px solid @tertiary-color; 
+        }
     }
     
-    tbody > tr > td {
-        border-top: 0px;
-        border-bottom: 1px solid #ddd;
+    tbody {
+        tr {
+            /// Seleção da linha
+            &:hover {
+              td {
+                  background-color: #CFE6F6;
+                  border-bottom: 2px solid #9DCEED;
+              }  
+            }
+
+            td {
+                border-top: 0px;
+                border-bottom: 1px solid @tertiary-color;              
+            }
+        }
     }
 }
