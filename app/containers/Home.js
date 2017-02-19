@@ -7,25 +7,21 @@ class Home extends React.Component {
   render() {
     return (
       <div className="container-fluid">
-        <div className="row">
-          <div className="col-sm-12">
-            <div className="panel">
-              <div className="panel-body">
-                <Captable store={data} height="200">
-                  <Columns>
-                    <Column name="Hero" />
-                    <Column name="Type" />
-                    <Column name="Level" />
-                    <Column name="Hero" />
-                    <Column name="Type" />
-                    <Column name="Level" />
-                    <Column name="Hero" />
-                    <Column name="Type" />
-                    <Column name="Level" />
-                  </Columns>
-                </Captable>
-              </div>
-            </div>
+        <div className="panel">
+          <div className="panel-body">
+            <Captable store={data} height="300">
+              <Columns>
+                <Column name="Hero" />
+                <Column name="Type" />
+                <Column name="Level" />
+                <Column name="Hero" />
+                <Column name="Type" />
+                <Column name="Level" />
+                <Column name="Hero" />
+                <Column name="Type" />
+                <Column name="Level" />
+              </Columns>
+            </Captable>
           </div>
         </div>
       </div>

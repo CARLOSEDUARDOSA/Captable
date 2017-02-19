@@ -2,6 +2,11 @@ body {
   background-color: grey;
   margin: 20px;
 }
+.captable__table th,
+.captable__table td {
+  border-right: 1px solid #ccc;
+  width: 20%;
+}
 .captable__table tbody {
   display: block;
   overflow: auto;
