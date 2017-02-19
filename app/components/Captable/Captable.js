@@ -29,18 +29,25 @@ class Captable extends React.Component {
 
   render() {
     return (
-      <table className="table table-striped">
-        {this.props.children}
-        <tbody>
-          {
-            this.getRows().map((item, index) => {
-              return item;
-            })
-          }
-        </tbody>
-      </table>
+      <div className="captable" style={{ height: this.props.height + 'px' }}>
+        <table className="captable__table table table-striped">
+          {this.props.children}
+          <tbody style={{ height: this.props.height - this.props.headerHeight + 'px' }}>
+            {
+              this.getRows().map((item, index) => {
+                return item;
+              })
+            }
+          </tbody>
+        </table>
+      </div>
     );
   }
+}
+
+Captable.defaultProps = {
+  height: '200',
+  headerHeight: '40'
 }
 
 class Columns extends React.Component {
@@ -55,6 +62,7 @@ class Columns extends React.Component {
   }
 }
 
+
 class Column extends React.Component {
   render() {
     return (
@@ -64,5 +72,10 @@ class Column extends React.Component {
     );
   }
 }
+
+Column.defaultProps = {
+  name: 'Nome indefinido',
+  width: '180px'
+};
 
 export { Captable, Columns, Column };
